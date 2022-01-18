@@ -3,10 +3,198 @@
 	<head>
 		<meta charset='utf-8'>
 		<title>Restraunt Name | Home</title>
+		<style>
+
+			*{
+				padding:0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			header{
+				background-color: black;
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				color: white;
+				align-items: center;
+				justify-content: space-around;
+			}
+
+			.body{
+				min-height: 80vh;
+			}
+
+			footer{
+				background-color: black;
+				color: white;
+				padding: 5px;
+				text-align: center;
+			}
+
+			.logo--header{
+				height: 50px;
+			}
+
+			header ul{
+				display: flex;
+				flex-wrap: nowrap;
+				list-style: none;
+			}
+
+			header ul li{
+				margin: 5px
+			}
+
+			.container{
+				/* background-color: grey; */
+				width: 100%;
+				padding: 5px;
+				background-color: red;
+			}
+
+			.col{
+				min-width: 30px;
+				min-height: 100px;
+				
+				margin: 5px;
+				display: flex;
+				justify-content: center;
+				padding: 5px;
+				flex-flow: column;
+			}
+
+			.placeholder-img{
+				width: 100%;
+				height: 300px;
+				background-color: orange;
+				
+			}
+
+			.item{
+				height: 80vw;
+				width: 60vw;
+				background-color: grey;
+				margin: 5px;
+				position: relative;
+				max-width: 250px;
+				max-height: 400px;
+			}
+
+			.item table{
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-50%);
+			}
+
+			.item-container{
+				display: flex;
+				list-style: none;
+				flex-flow: column;
+				align-items: center;
+			}
+
+			form{
+				display: flex;
+				flex-flow: column;
+			}
+		</style>
+
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		<div id="content">
+		<header>
+			<img class="logo--header" src="data:image/png;base64,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" alt="header logo"/> 
+			<h1>Big Daddy Pizza</h1>
+			<ul class="nav-menu">
+				<li class="nav-menu__li">Home</li>
+				<li class="nav-menu__li">About</li>
+				<li class="nav-menu__li">Specials</li>
+				<li class="nav-menu__li">Order Now!</li>
+			</ul>
+		</header>
+
+
+		<div class="body">
+			<div class="container">
+				<div class='col'>
+					<h2>Heading</h2>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ullam nemo tenetur, illum omnis sit in molestiae non ducimus autem fugit debitis reprehenderit commodi nostrum obcaecati repellendus, hic quisquam nobis.</p>
+				</div>
+				<div class="col">
+					<img class="placeholder-img" src="" alt="">
+				</div>
+			</div>
+
+			<div class="container">
+				<h2>Heading</h2>
+				<ul class="item-container">
+					<li class="item">
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Price</th>
+							</tr>
+							<tr>
+								<td>Sample Pizza</td>
+								<td>$9999</td>
+							</tr>
+						</table>
+					</li>
+					<li class="item">
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Price</th>
+							</tr>
+							<tr>
+								<td>Sample Pizza</td>
+								<td>$9999</td>
+							</tr>
+						</table>
+					</li>
+					<li class="item">
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Price</th>
+							</tr>
+							<tr>
+								<td>Sample Pizza</td>
+								<td>$9999</td>
+							</tr>
+						</table>
+					</li>
+					
+				</ul>
+			</div>
+
+			<div class="container">
+				<form action="#">
+					<label for="">First Name</label>
+					<input type="text">
+					<label for="">Last Name</label>
+					<input type="text" name="" id="">
+					<label for="">Email</label>
+					<input type="text">
+					<label for="">Message</label>
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+					<button>Submit</button>
+				</form>
+
+				<div class="placeholder-img">
+
+				</div>
+			</div>
 		</div>
+
+		
+		
+		<footer>
+			<p>Created by Jayden Vause</p>
+		</footer>
+
 		<script src='./main.js'></script>
 	</body>
 </html>
