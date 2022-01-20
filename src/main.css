@@ -4,7 +4,7 @@
 			/* Neonderthaw */
 			@font-face {
 				font-family: 'Neonderthaw';
-				src: url('./Neonderthaw-Regular.ttf');
+				src: url('./lib/fonts/Neonderthaw-Regular.ttf');
 				/* font-weight: 400; */
 				/* font-style: normal; */
 			}
@@ -34,10 +34,12 @@
 
 			.body{
 				min-height: 80vh;
+                padding-top: 40px;
+                padding-bottom: 40px;
 				/* background-color: red;; */
 				background-image: url(https://media.gettyimages.com/photos/italian-pizza-picture-id1045929620?s=2048x2048);
-				background-repeat: no-repeat;
-				background-size:cover;
+				background-repeat: repeat;
+				background-size:auto;
 			}
 
 			footer{
@@ -75,6 +77,8 @@
 				flex-wrap: wrap;
 				/* flex-flow: column; */
 				/* flex-basis: auto; */
+                padding: 20px;
+                border-radius: 5px;
 			}
 
 			.container--no-flex{
@@ -111,28 +115,35 @@
 			.item{
 				height: 80vw;
 				width: 60vw;
+                padding: 5px;
+                max-width: 300px;
+                max-height: 400px;
+                min-width: 300px;
+                min-height: 400px;
 				background-color: grey;
-				margin: 5px;
-				position: relative;
-				max-width: 250px;
-				max-height: 400px;
+				margin: 2px;
+                flex-grow: 1;
+                flex-basis: 0;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+
+                background-image: url(https://media.istockphoto.com/photos/tasty-pepperoni-pizza-and-cooking-ingredients-tomatoes-basil-on-black-picture-id1083487948?k=20&m=1083487948&s=612x612&w=0&h=ROZ5t1K4Kjt5FQteVxTyzv_iqFcX8aqpl7YuA1Slm7w=);
+                background-size:cover;
 			}
 
 			.item table{
-				position: absolute;
+				/* position: absolute;
 				bottom: 0;
 				left: 50%;
-				transform: translate(-50%);
+				transform: translate(-50%); */
 			}
 
 			.item-container{
 				display: flex;
-				flex-flow: row;
-				list-style: none;
-				/* flex-flow: column; */
-				justify-content: space-around;
-				align-items: center;
-				flex-wrap: wrap;;
+                list-style: none;
+                flex-wrap: wrap;
+                /* height: 300px; */
 			}
 			
 
