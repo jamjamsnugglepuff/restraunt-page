@@ -1,0 +1,148 @@
+
+			/*Fonts*/
+
+			/* Neonderthaw */
+			@font-face {
+				font-family: 'Neonderthaw';
+				src: url('./Neonderthaw-Regular.ttf');
+				/* font-weight: 400; */
+				/* font-style: normal; */
+			}
+			/*End Fonts*/
+
+			*{
+				padding:0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			h2{
+				font-family: 'Neonderthaw';
+                font-size: 3em;
+			}
+
+			header{
+				background-color: black;
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				color: white;
+				align-items: center;
+				justify-content: space-around;
+				padding: 10px;
+			}
+
+			.body{
+				min-height: 80vh;
+				/* background-color: red;; */
+				background-image: url(https://media.gettyimages.com/photos/italian-pizza-picture-id1045929620?s=2048x2048);
+				background-repeat: no-repeat;
+				background-size:cover;
+			}
+
+			footer{
+				background-color: black;
+				color: white;
+				padding: 5px;
+				text-align: center;
+			}
+
+			.logo--header{
+				height: 50px;
+			}
+
+			header ul{
+				display: flex;
+				flex-wrap: nowrap;
+				list-style: none;
+			}
+
+			header ul li{
+				margin: 5px
+			}
+
+			.container{
+				/* background-color: grey; */
+				width: 100%;
+				padding: 5px;
+				background-color: rgba(66, 66, 66, 0.8);
+				color: white;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				max-width: 800px;
+				margin: 0 auto;
+				flex-wrap: wrap;
+				/* flex-flow: column; */
+				/* flex-basis: auto; */
+			}
+
+			.container--no-flex{
+				display: block;
+			}
+
+			.container > * {
+				flex: 1;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.col{
+				/* min-width: 300px; */
+				min-height: 100px;
+				
+				margin: 5px;
+				display: flex;
+				justify-content: center;
+				padding: 5px;
+				flex-flow: column;
+			}
+
+			.placeholder-img{
+				width: 100%;
+				min-width: 300px;
+				height: 300px;
+				/* background-color: orange; */
+				background-image: url(https://media.istockphoto.com/photos/cheesy-pepperoni-pizza-picture-id938742222?k=20&m=938742222&s=612x612&w=0&h=X5AlEERlt4h86X7U7vlGz3bDaDDGQl4C3MuU99u2ZwQ=);
+				background-size: cover;
+				
+			}
+
+			.item{
+				height: 80vw;
+				width: 60vw;
+				background-color: grey;
+				margin: 5px;
+				position: relative;
+				max-width: 250px;
+				max-height: 400px;
+			}
+
+			.item table{
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-50%);
+			}
+
+			.item-container{
+				display: flex;
+				flex-flow: row;
+				list-style: none;
+				/* flex-flow: column; */
+				justify-content: space-around;
+				align-items: center;
+				flex-wrap: wrap;;
+			}
+			
+
+			form{
+				display: flex;
+				flex-flow: column;
+			}
+
+			.a--unstyled{
+				text-decoration: none;
+				color: white;
+				cursor: pointer;
+			}
